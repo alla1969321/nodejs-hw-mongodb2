@@ -1,6 +1,6 @@
 
 import { model, Schema } from 'mongoose';
-import { usersCollection } from "./user.js"
+
 const sessionsSchema = new Schema(
     {
         userId: { type: Schema.Types.ObjectId, ref: 'users' },
@@ -9,12 +9,7 @@ const sessionsSchema = new Schema(
         accessTokenValidUntil: { type: Date, required: true },
         refreshTokenValidUntil: { type: Date, required: true },
     },
-        userId: {
-            type: Schema.ObjectId,
-            required: true,
-            ref: usersCollection,
-            unique: true,
-        },
+        
     {
         timestamps: true,
         versionKey: false
