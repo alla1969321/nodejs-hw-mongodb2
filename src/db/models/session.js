@@ -9,7 +9,7 @@ const sessionsSchema = new Schema(
         accessTokenValidUntil: { type: Date, required: true },
         refreshTokenValidUntil: { type: Date, required: true },
     },
-      userId: {
+        userId: {
             type: Schema.ObjectId,
             required: true,
             ref: usersCollection,
